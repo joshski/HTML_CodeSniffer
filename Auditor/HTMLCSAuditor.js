@@ -1742,7 +1742,7 @@ var HTMLCSAuditor = new function()
 
             // Pixel width of the scroller.
             var scrollBarWidth = (widthNoScrollBar - widthWithScrollBar);
-            
+
             // Set the auditor-level variable so we don't have to run this again.
             _sbWidth = scrollBarWidth;
             return scrollBarWidth;

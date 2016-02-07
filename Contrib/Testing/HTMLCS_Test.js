@@ -35,7 +35,7 @@ if (system.args.length < 2 || system.args.length > 2) {
         var testContent = content.substr(indexStart, indexEnd - indexStart);
         var testContent = testContent.split("\n");
         testContent.splice(0, 1);
-        
+
         for (var i = 0; i < testContent.length; i++) {
             var words = testContent[i].split(' ');
             switch (words[0]) {
@@ -121,7 +121,7 @@ if (system.args.length < 2 || system.args.length > 2) {
             console.info('FAILURES!');
             retval = 1;
         }
-        
+
         console.info('Assertions: ' + testData.assertions.length + ', Passed: ' + (testData.assertions.length - failures) + ', Failed: ' + failures);
         phantom.exit(retval);
     };
@@ -174,6 +174,7 @@ if (system.args.length < 2 || system.args.length > 2) {
                     case 'WCAG2AA':
                     case 'WCAG2AAA':
                     case 'Section508':
+                    case 'BBC':
                         page.evaluate(function(standard) {HTMLCS_RUNNER.run(standard);}, testData.standard);
                     break;
                     default:

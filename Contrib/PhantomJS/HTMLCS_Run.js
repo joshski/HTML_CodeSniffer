@@ -9,7 +9,7 @@ var messages = {
 
 if (system.args.length < 3 || system.args.length > 4) {
     console.log('Usage: phantomjs HTMLCS_Run.js URL standard [report]');
-    console.log('  available standards: "WCAG2A", "WCAG2AA", "WCAG2AAA", "Section508"');
+    console.log('  available standards: "WCAG2A", "WCAG2AA", "WCAG2AAA", "Section508", "BBC"');
     console.log('  available reports: "default" (default if omitted), "table"');
     phantom.exit();
 } else {
@@ -71,7 +71,7 @@ if (system.args.length < 3 || system.args.length > 4) {
                 while (remText.length > 0) {
                     line  = '';
                     line += (Array(8).join(' ')).substr(0, 7) + ' | ';
-                    
+
                     if (remText.length < 75) {
                         line += remText;
                         console.log(line);
@@ -85,7 +85,7 @@ if (system.args.length < 3 || system.args.length > 4) {
                 }
 
                 console.log('--------+------------------------------------------+------------+---------------------');
-                
+
             }
         }
 
@@ -155,6 +155,7 @@ if (system.args.length < 3 || system.args.length > 4) {
                     case 'WCAG2AA':
                     case 'WCAG2AAA':
                     case 'Section508':
+                    case 'BBC':
                         page.evaluate(function(standard) {HTMLCS_RUNNER.run(standard);}, standard);
                     break;
                     default:
