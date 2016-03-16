@@ -9,7 +9,7 @@ var messages = {
 
 if (system.args.length < 3 || system.args.length > 4) {
     console.log('Usage: phantomjs HTMLCS_Run.js URL standard [report]');
-    console.log('  available standards: "WCAG2A", "WCAG2AA", "WCAG2AAA", "Section508", "BBC"');
+    console.log('  available standards: "WCAG2A", "WCAG2AA", "WCAG2AAA", "Section508", "BBCA11y"');
     console.log('  available reports: "default" (default if omitted), "table"');
     phantom.exit();
 } else {
@@ -155,7 +155,7 @@ if (system.args.length < 3 || system.args.length > 4) {
                     case 'WCAG2AA':
                     case 'WCAG2AAA':
                     case 'Section508':
-                    case 'BBC':
+                    case 'BBCA11y':
                         page.evaluate(function(standard) {HTMLCS_RUNNER.run(standard);}, standard);
                     break;
                     default:

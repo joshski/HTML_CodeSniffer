@@ -9560,7 +9560,7 @@ return jQuery;
 
 
 
-var HTMLCS_BBC_Sniffs_A11y = {
+var HTMLCS_BBCA11y_Sniffs_A11y = {
     /**
      * Determines the elements to register for processing.
      *

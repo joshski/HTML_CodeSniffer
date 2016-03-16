@@ -1,5 +1,5 @@
-window.HTMLCS_BBC = {
-    name: 'BBC',
+window.HTMLCS_BBCA11y = {
+    name: 'BBCA11y',
     description: 'BBC Accessibility Standards',
     sniffs: [
         'A11y'

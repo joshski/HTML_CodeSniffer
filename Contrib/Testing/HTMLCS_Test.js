@@ -174,7 +174,7 @@ if (system.args.length < 2 || system.args.length > 2) {
                     case 'WCAG2AA':
                     case 'WCAG2AAA':
                     case 'Section508':
-                    case 'BBC':
+                    case 'BBCA11y':
                         page.evaluate(function(standard) {HTMLCS_RUNNER.run(standard);}, testData.standard);
                     break;
                     default:
